@@ -22,6 +22,8 @@ class generate():
                 first = words[1]
                 last = words[-2]
                 url = words[-1]
+                if url[0]=="w":
+                    url = "http://"+url
                 lst.append({"first": first, "last":last, "url":url })
                 print first,last,url
         json = {"all_users": lst}
